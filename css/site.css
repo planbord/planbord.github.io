@@ -1,0 +1,201 @@
+.filter-panel__container {
+    z-index: 100;
+    background: white;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    border-left: 1px solid #d8d8d8;
+    padding: 5px 10px;
+}
+
+.filter-panel__head {
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.filter-panel__nav {
+    text-decoration: none;
+    display: block;
+    line-height: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.filter-panel__nav:hover {
+    background-color: #cce0f0;
+}
+
+.filter-panel__nav i {
+    width: 30px;
+}
+
+.task, .planned-task {
+    background: white;
+    border: 1px solid #7d7d7d;
+}
+
+.task { margin-bottom: 7px; }
+
+.task__info {
+    padding: 10px;
+    width: 100%;
+}
+
+.task__title {
+    float: left;
+    margin-bottom: 7px;
+}
+
+.task__state {
+    float: right;
+}
+
+.task__info p {
+    margin: 0 3px 0 3px;
+}
+
+.task__info p i {
+    margin-right: 5px;
+    text-align: left;
+}
+
+.container {
+    margin: 150px 10px 0 10px;
+}
+
+.m-pagination--outline>li {
+    color: black;
+    box-shadow: none;
+    border: 1px solid #d8d8d8!important;
+    border-bottom:none!important;
+}
+.m-pagination--outline>li.current-day {
+    width: 250px!important;
+    padding-top: 7px;
+    padding-left: 7px;
+    text-align: left!important;
+    box-shadow: none!important;
+    border:none!important;
+}
+.m-pagination--outline>li>a:active, .m-pagination--outline>li>a:focus, .m-pagination--outline>li>a:hover{
+    background-color: transparent;;
+    box-shadow: none;
+    cursor: pointer
+}
+
+.resources {
+    width: 70px;
+    float: left;
+}
+
+.resources .tab {
+    border: 1px solid #d8d8d8;
+    display: block;
+    border-top: none;
+    border-right: none;
+    height: 60px;
+}
+
+.resources i {
+    cursor: pointer;
+    font-size: 40px;
+    line-height: 60px;
+    display: block;
+    text-align: center;
+}
+
+.resources i:not(.active) {
+    color: #d8d8d8;
+}
+
+.resource-list {
+    border: 1px solid #d8d8d8;
+    border-right: none;
+    width: calc(100% - 75px);
+    height: 180px;
+    overflow-y: scroll;
+}
+
+.resource-list .resource {
+    padding: 8px 4px;
+}
+
+/*.resource { margin-bottom: 7px; }*/
+
+.day-progress {
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    height: 22px;
+}
+
+.day-progress__inner {
+    margin: 3px;
+}
+
+.day-progress__bar__open, .day-progress__bar {
+    height: 14px;
+    margin: 0 2px;
+    float: left;
+}
+
+.day-progress__bar {
+    background-color: #0064b4;
+}
+
+.planning {
+    border: 1px solid #d8d8d8;
+}
+
+.scrolling-wrapper {
+    width: 100%;
+    height: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scrolling-wrapper .som {
+    margin-left: 69px;
+    width: 10000px;
+}
+
+.scrolling-wrapper .som > div {
+    width: 70px;
+    height: 500px;
+    float: left;
+}
+
+/* why no display inline-block?!?! */
+.scrolling-wrapper .som > div.card {
+    width: 150px;
+    border-left: 1px solid #d8d8d8;
+}
+
+
+.task-something {
+    display: none;
+}
+
+.planned-task {
+    height: 115px;
+    width: 200px;
+    position: relative; 
+}
+
+.planned-task-info {
+    display: block;
+    padding: 10px;
+    position: absolute;
+}
+
+.planned-task-info > .title { margin: 7px 0;}
+.planned-task-info > .a-avatar { margin-right: 5px;}
+.current-time {
+    z-index: 2;
+    height: 800px;
+    position: relative;
+    width: 1750px;
+    border-right: 1px solid red;
+    background-color: rgba(0, 0, 0, 0.2)
+}

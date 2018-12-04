@@ -1,0 +1,107 @@
+.filter-panel__container {
+    z-index: 100;
+    background: white;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    border-left: 1px solid #d8d8d8;
+    padding: 5px 10px;
+}
+
+.filter-panel__head{
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.filter-panel__nav {
+    text-decoration: none;
+    display: block;
+    line-height: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.filter-panel__nav:hover {
+    background-color: #cce0f0;
+}
+.filter-panel__nav i { width: 30px; }
+
+.task{
+    background: white;
+    border: 1px solid #7d7d7d;
+}
+
+.task__info {
+    padding: 10px;
+    width: 100%;
+}
+.task__title {
+    float: left;
+    margin-bottom: 7px;
+}
+.task__state {float: right;}
+.task__info p { margin: 0 3px 0 3px;}
+.task__info p i { margin-right: 5px; text-align: left; }
+
+.container {
+    margin: 150px 10px 0 10px;
+}
+
+
+.day-progress {
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    height: 22px;
+}
+.day-progress__inner { margin: 3px; }
+.day-progress__bar__open, .day-progress__bar { height: 14px; margin: 0 2px; float: left;}
+.day-progress__bar { background-color: #0064b4;}
+
+
+
+
+
+.planning {
+    position: relative;
+    border: 1px solid #d8d8d8;
+}
+
+.resources {
+    width: 150px; 
+    height: 50px; 
+    position: absolute;
+    background-color: aqua;
+}
+
+.resources .tabs {
+    display: inline-block;
+    width: 30px;
+}
+
+.resources .names {
+    width: 120px;
+    display: inline-block;
+    background-color: blue;
+    height: 150px;
+}
+
+.scrolling-wrapper {
+    width: 100%;
+    height: 500px;
+    float: right;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.planned { width: calc(24 * 150px - 71px); background-color: red; height: 71px;}
+
+.offset { width: 150px; height: 500px; float: left; background-color: black;}
+
+.scrolling-wrapper .card {
+    width: 150px;
+    height: 500px;
+    display: inline-block;
+}
+.scrolling-wrapper .card:not(:last-child) { border-right: 1px solid #d8d8d8; }
