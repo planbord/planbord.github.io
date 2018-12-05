@@ -1,3 +1,8 @@
+.container {
+    margin: 75px 20px 0 20px;
+}
+
+/* SIDENAV */
 .filter-panel__container {
     z-index: 100;
     background: white;
@@ -61,10 +66,8 @@
     text-align: left;
 }
 
-.container {
-    margin: 150px 10px 0 10px;
-}
 
+/* DAY NAVIGATION */
 .m-pagination--outline>li {
     color: black;
     box-shadow: none;
@@ -85,19 +88,18 @@
     cursor: pointer
 }
 
+/* TOP */
 .resources {
-    width: 70px;
+    width: 71px;
     float: left;
 }
-
 .resources .tab {
     border: 1px solid #d8d8d8;
     display: block;
-    border-top: none;
-    border-right: none;
-    height: 60px;
+    height: 61px;
 }
-
+.resources .tab:not(:first-child) { border-top: none; }
+.resources .tab:last-child { border-bottom: none; }
 .resources i {
     cursor: pointer;
     font-size: 40px;
@@ -110,38 +112,63 @@
     color: #d8d8d8;
 }
 
-.resource-list {
+.resource-scroll {
+    overflow-x: scroll;
     border: 1px solid #d8d8d8;
-    border-right: none;
-    width: calc(100% - 75px);
-    height: 180px;
-    overflow-y: scroll;
+    border-left: none;
+    border-bottom: none;
 }
 
-.resource-list .resource {
+.resource-names{
+    padding-top: 7px;
+    float: left;
+    height: 180px;
+    width: 150px; 
+}
+
+.resource-names > div { 
+    height: 24px; 
+    padding-top: 3px; 
+    padding-left: 7px; 
+    margin-bottom: 7px;
+}
+
+.resource-planning {
+    padding-top: 7px;
+    float:left;
+    width: calc(100% - 175px);
+    height: 180px;
+}
+
+.resource-planning .resource {
     padding: 8px 4px;
 }
-
-/*.resource { margin-bottom: 7px; }*/
 
 .day-progress {
     border: 1px solid #d8d8d8;
     width: 100%;
-    height: 22px;
+    height: 24px;
+    margin-left: 3px;
+    margin-bottom: 7px;
+}
+.day-progress__bar__onbeschikbaar, .day-progress__bar__planned, .day-progress__bar__open, .day-progress__bar__conflicted { float: left; }
+
+.day-progress__bar__onbeschikbaar {
+    height: 23px;
+    background-color: lightgray;
 }
 
-.day-progress__inner {
-    margin: 3px;
-}
-
-.day-progress__bar__open, .day-progress__bar {
+.day-progress__bar__planned, .day-progress__bar__open, .day-progress__bar__conflicted {
     height: 14px;
-    margin: 0 2px;
-    float: left;
+    margin-top: 4px;
 }
 
-.day-progress__bar {
-    background-color: #0064b4;
+.day-progress__bar__planned {
+    background-color: rgba(0, 100, 180, 0.7);
+}
+
+.day-progress__bar__conflicted {
+    background-color: rgba(250, 175, 30, 0.7);
 }
 
 .planning {
@@ -150,28 +177,26 @@
 
 .scrolling-wrapper {
     width: 100%;
-    height: 500px;
+    height: 650px;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
 .scrolling-wrapper .som {
     margin-left: 69px;
-    width: 10000px;
+    width: calc(150px * 24);
 }
 
 .scrolling-wrapper .som > div {
     width: 70px;
-    height: 500px;
+    height: 650px;
     float: left;
 }
 
-/* why no display inline-block?!?! */
 .scrolling-wrapper .som > div.card {
     width: 150px;
     border-left: 1px solid #d8d8d8;
 }
-
 
 .task-something {
     display: none;
@@ -188,6 +213,8 @@
     padding: 10px;
     position: absolute;
 }
+
+.conflicted { background-color: rgba(250, 175, 30, 0.7);}
 
 .planned-task-info > .title { margin: 7px 0;}
 .planned-task-info > .a-avatar { margin-right: 5px;}
