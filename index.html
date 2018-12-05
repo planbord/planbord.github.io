@@ -19,6 +19,21 @@
     <script>
         $( document ).ready(function() {
             $('.planning').animate({scrollLeft: $('.current-time').width() - 600}, 500);
+
+            $(".planned-task").hover(
+                
+                function() {
+                    var persons = $(this).attr('data-person').split(";");
+                    persons.forEach(function(person) {
+                        $('.day-progress[data-person="'+person+'"]').css('border-color', 'black');
+                    });
+                },
+                function () {
+                    $(".day-progress").each(function () {
+                        $(this).css('border-color', "#bbb")
+                    });
+                }
+            );
         });
     </script>
 </body>
