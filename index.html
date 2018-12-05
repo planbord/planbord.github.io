@@ -21,15 +21,21 @@
             $('.planning').animate({scrollLeft: $('.current-time').width() - 600}, 500);
 
             $(".planned-task").hover(
-                
                 function() {
+                    $(".day-progress").each(function () {
+                        $(this).css('opacity', "0.5");
+                    });
+                    
                     var persons = $(this).attr('data-person').split(";");
+                    
                     persons.forEach(function(person) {
-                        $('.day-progress[data-person="'+person+'"]').css('border-color', 'black');
+                        $('.day-progress[data-person="'+person+'"]').css('opacity', "1");
+                        $('.day-progress[data-person="'+person+'"]').css('border-color', '#666');
                     });
                 },
                 function () {
                     $(".day-progress").each(function () {
+                        $(this).css('opacity', "1");
                         $(this).css('border-color', "#bbb")
                     });
                 }
